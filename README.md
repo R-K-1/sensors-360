@@ -72,7 +72,7 @@ This project connects to a Postgres database and creates 3 tables:
 	└── gen_db_data.py # Generate initial sensor data
 	└── gen_db_schema.py # Persist schema to DB
 	└── gen_heartbeats.py # Generates a heartbeat signal for a random sensor every 5 seconds
-	└── confi.py # containing app configuration such as db credentials
+	└── config.py # containing app configuration such as db credentials
 	└── gen_heartbeats.py # Generates a heartbeat signal for a random sensor every 5 seconds
 	└── migrations/ # DB schema update information automatically generated whenever the schema changes
 	└── app/ # Flask folder with crucial modules
