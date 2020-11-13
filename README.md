@@ -7,9 +7,11 @@ between the client and the server.
 
 ## Purpose
 
-The immediate purpose of this project i monitoring the health of sensors so defective ones can
+The immediate purpose of this project is monitoring the health of sensors so defective ones can
 be replaced, but the ultimate goal will be running analytics on sensor data to accurately predict
-their failure and perform preventative maintenance or replacement. 
+their failure and perform preventative maintenance or replacement.
+
+##### Currently, the websocket server provides an update on censors status every 5 seconds; moreover every 30 seconds, it searchs for censors that have not sent a heartbeat in more than 10 minutes.
 
 The following are some questions that can be answered by the data:
 
@@ -101,7 +103,7 @@ This project connects to a Postgres database and creates 3 tables:
 
 ## Example Queries
 
-** How many percent of sensors have not sent a healthcheck for more than 10 minutes**
+** How many percent of sensors have not sent a healthcheck for more than 10 minutes **
 
 ```
     SELECT DISTINCT ON (s.name), h.timestamp
