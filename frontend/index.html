@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sensors 360</title>
+    </head>
+    <body>
+        <script>
+            var ws = new WebSocket("ws://127.0.0.1:6000/");
+            ws.onmessage = function (event) {
+                console.log(event.data);
+            };
+            document.body.appendChild(messages);
+        </script>
+    </body>
+</html>
